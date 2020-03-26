@@ -1,0 +1,19 @@
+version: '2'
+networks:
+  backend:
+    external: true
+
+services:
+  react-client:
+    command: yarn start
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.dev
+    container_name: react-client
+    restart: always
+    volumes:
+      - "./app:/app"
+    ports:
+      - "9000:9000"
+    networks:
+      - backend
