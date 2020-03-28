@@ -9,16 +9,18 @@ module.exports = merge(common, {
     devtool: 'inline-source-map',
     watch: true,
     watchOptions: {
-        ignored: ['node_modules/**']
+        ignored: ['node_modules/**'],
+        aggregateTimeout: 300,
+        poll: 500
     },
     devServer: {
         writeToDisk: true,
         compress: false,
         contentBase: sourcePath,
         historyApiFallback: true,
-        host: 'localhost',
+        host: '0.0.0.0',
         port: 3000,
-        hot: false,
+        hot: true,
         inline: true,
         stats: {
             assets: true,
