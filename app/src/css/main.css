@@ -1,4 +1,4 @@
-/* Tailwind */
+/* Init Tailwind */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
@@ -13947,6 +13947,8 @@ video {
 .duration-1000 {
   transition-duration: 1000ms;
 }
+
+/* Custom CSS */
 
 @media (min-width: 640px) {
   .sm\:sr-only {
