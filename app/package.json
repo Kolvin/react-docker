@@ -4,11 +4,14 @@
   "description": "",
   "main": "src/App.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js"
+    "dev": "yarn build:style && webpack-dev-server --config webpack.dev.js",
+    "build:style": "tailwind build src/styles/main.css -o src/styles/tailwind.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.7.5",
+    "postcss-cli": "^7.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -17,8 +20,10 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
     "html-loader": "^1.0.0",
     "html-webpack-plugin": "^4.0.2",
+    "tailwindcss": "^1.2.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
