@@ -1,4 +1,4 @@
-# React
+# Docker React
 
 #### Enter root
     cd project;
